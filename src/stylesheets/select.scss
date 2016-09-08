@@ -1,0 +1,35 @@
+.select-wrapper {
+  display: inline-block;
+  overflow: hidden;
+  box-sizing: border-box;
+  width: 110px;
+  height: auto;
+  // background: #f4f4f4;
+  vertical-align: middle;
+  position: relative;
+  border-radius: 2px;
+  select {
+    background: #f4f4f4;
+    background: linear-gradient(to bottom,#f7f5f5,#828080);
+    width: 150%;
+    height: 33px;
+    border: none;
+    outline: none;
+    padding-left: 10px;
+    -webkit-appearance: none;
+
+  }
+  &:after {
+    $size: 12px;
+    content: '\25BC';
+    color: #555555;
+    font-size: $size;
+    size: $size;
+    margin-top: -$size/2;
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    pointer-events: none;
+  }
+}

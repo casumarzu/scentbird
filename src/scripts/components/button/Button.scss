@@ -1,0 +1,16 @@
+$btn-color: #ff458f;
+
+.flat-button {
+  background: $btn-color;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  outline: none;
+  text: normal center uppercase Arial 20px 1.5;
+  padding: 10px 40px;
+  margin: 10px;
+  display: inline-block;
+  &__container {
+    display: inline-block;
+  }
+}

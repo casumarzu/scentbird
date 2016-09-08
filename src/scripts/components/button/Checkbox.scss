@@ -1,0 +1,45 @@
+$btn-color: #ff458f;
+
+.b-check-item {
+  cursor: pointer;
+  color: #555555;
+  p {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0;
+  }
+  input[type='checkbox'], input[type='radio'] {
+    display: none;
+    & + .e-check {
+      display: inline-block;
+      vertical-align: middle;
+      width: 22px;
+      height: 24px;
+      background-color: $btn-color;
+      background-position: 0px -24px;
+      cursor: pointer;
+      margin-right: 10px;
+    }
+    &:checked {
+      & + .e-check {
+        &:after {
+          content: '\2713';
+          display: block;
+          color: #fff;
+        }
+      }
+    }
+    &:disabled {
+      & + .e-check {
+        opacity: 0.5;
+        cursor: default;
+      }
+    }
+  }
+
+  input[type='radio'] {
+    & + .e-check {
+
+    }
+  }
+}

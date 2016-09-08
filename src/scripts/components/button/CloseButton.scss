@@ -1,0 +1,43 @@
+$btn-color: #ff458f;
+
+.close-button {
+  background: $btn-color;
+  border: none;
+  outline: none;
+  color: #fff;
+  cursor: pointer;
+  outline: none;
+  display: inline-block;
+  background: transparent;
+  cursor: pointer;
+  size: 100%;
+  @mixin christ {
+    content: '';
+    size: 2px 100%;
+    display: block;
+    background: #b9b9b9;
+    position: absolute;
+    left: 50%;
+    top: 0;
+  }
+  &:after {
+    @include christ;
+    transform: rotate(45deg);
+  }
+  &:before {
+    @include christ;
+    transform: rotate(-45deg);
+  }
+  &__container {
+    display: inline-block;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    size: 50px;
+    transition: transform .2s ease-in;
+    &:hover {
+      transform: rotate(180deg);
+      transition: transform .4s ease-out;
+    }
+  }
+}
